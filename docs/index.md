@@ -1,3 +1,9 @@
+# **FSAI Lab Manual**
+
+You can [view or download the Full Stack AI (FSAI) manual here](./1.pdf).
+
+> 📘 This manual contains experiments (2-9), code, and outputs.
+
 # **FSAI Lab Experiments**
 
 ## **Experiment 1**
