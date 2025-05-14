@@ -1,7 +1,4 @@
 # **AML** 
-
-###### **Manual doc at the end** 
-
 ### **1\. Web Crawlers: BeautifulSoup, lxml, and Scrapy**
 
 * **Aim:** To implement and compare Python-based web crawlers (BeautifulSoup, lxml, and Scrapy) for extracting structured data from online sources.  
@@ -278,7 +275,3 @@
 * **Output:**  
   * Assignment of each Indian state to one of K clusters.  
   * The characteristics (mean values of socio-economic features) of each cluster, allowing for interpretation of what defines each segment (e.g., "High Population, Low Literacy Cluster", "Low Unemployment, High Urbanization Cluster"). This helps in identifying patterns and disparities among states. A visualization (e.g., a scatter plot if using 2-3 key dimensions, or a table) of states and their assigned clusters.
-
-<h2>AML</h2>
-
-<iframe src="https://docs.google.com/document/d/e/2PACX-1vSlyqvJTZG2MlaD13nZO--jSw8B7OJI5KUKkAUjCZ8HX98FH00cj63jl6t5yRA7VG2cgSlDWOnj2e_2/pub"</iframe>
