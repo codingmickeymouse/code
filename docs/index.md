@@ -1,4 +1,7 @@
 # **AML** 
+
+**AML_Practicals** - https://docs.google.com/document/d/126f6CAmwOU_xlaEpQA4YGY67LOH_rjBpD7RXxlz1EAs/edit?usp=drivesdk
+
 ### **1\. Web Crawlers: BeautifulSoup, lxml, and Scrapy**
 
 * **Aim:** To implement and compare Python-based web crawlers (BeautifulSoup, lxml, and Scrapy) for extracting structured data from online sources.  
