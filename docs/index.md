@@ -1,6 +1,6 @@
 # **AML** 
 
- **Manual doc at the end** 
+###### **Manual doc at the end** 
 
 ### **1\. Web Crawlers: BeautifulSoup, lxml, and Scrapy**
 
