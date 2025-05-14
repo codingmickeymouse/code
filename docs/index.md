@@ -279,3 +279,6 @@
   * Assignment of each Indian state to one of K clusters.  
   * The characteristics (mean values of socio-economic features) of each cluster, allowing for interpretation of what defines each segment (e.g., "High Population, Low Literacy Cluster", "Low Unemployment, High Urbanization Cluster"). This helps in identifying patterns and disparities among states. A visualization (e.g., a scatter plot if using 2-3 key dimensions, or a table) of states and their assigned clusters.
 
+<h2>AML</h2>
+
+<iframe src="[https://docs.google.com/document/d/e/2PACX-1vQ.../pub?embedded=true](https://docs.google.com/document/d/1FdjZPOyHYTb2qIlll87d1pJedHJsjVMHLMVgxRTKJTk/edit?usp=sharing)" width="100%" height="800px"></iframe>
