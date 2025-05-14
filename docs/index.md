@@ -3,8 +3,8 @@ https://docs.google.com/document/d/126f6CAmwOU_xlaEpQA4YGY67LOH_rjBpD7RXxlz1EAs/
 
 ------------------------------------------------------------------------
 [AML PDF](https://raw.githubusercontent.com/codingmickeymouse/code/main/docs/aml.pdf)
+You can [view (AML) manual here](./aml.pdf).
 
-[Open Raw PDF](https://raw.githubusercontent.com/codingmickeymouse/code/0bde773dba411dcd9d1b10e1dd9879815c0bac65/docs/aml.pdf)
 
 **1. Web Crawlers using BeautifulSoup, lxml, and Scrapy**
 
