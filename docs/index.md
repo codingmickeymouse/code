@@ -2,7 +2,7 @@
 https://docs.google.com/document/d/126f6CAmwOU_xlaEpQA4YGY67LOH_rjBpD7RXxlz1EAs/edit?usp=drivesdk**
 
 ------------------------------------------------------------------------
-[Open PDF Document (Raw Link)]([https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME/raw/main/1.pdf](https://github.com/codingmickeymouse/code/blob/main/docs/aml.pdf))
+[Open PDF (Raw Link)]([https://github.com/codingmickeymouse/code/raw/main/1.pdf](https://github.com/codingmickeymouse/code/blob/main/docs/aml.pdf))
 
 **1. Web Crawlers using BeautifulSoup, lxml, and Scrapy**
 
