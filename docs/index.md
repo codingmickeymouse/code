@@ -4,6 +4,8 @@ https://docs.google.com/document/d/126f6CAmwOU_xlaEpQA4YGY67LOH_rjBpD7RXxlz1EAs/
 ------------------------------------------------------------------------
 [AML PDF](https://raw.githubusercontent.com/codingmickeymouse/code/main/docs/aml.pdf)
 
+[Open PDF]([https://github.com/codingmickeymouse/code/raw/main/aml.pdf](https://github.com/codingmickeymouse/code/blob/main/docs/aml.pdf))
+
 **1. Web Crawlers using BeautifulSoup, lxml, and Scrapy**
 
 **Aim:**\
