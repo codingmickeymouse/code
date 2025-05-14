@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AML Assignments</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
+        h2 { color: #2c3e50; }
+        pre { background-color: #ecf0f1; padding: 10px; border-radius: 5px; overflow-x: auto; }
+        section { background: white; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <h1>AML Assignment Solutions</h1>
+
+    <section>
+        <h2>1a. Web Crawlers - BeautifulSoup, lxml, Scrapy</h2>
+        <h3>Aim</h3>
+        <p>Implement and compare web crawlers using BeautifulSoup, lxml, and Scrapy.</p>
+        <h3>Algorithm</h3>
+        <ol>
+            <li>Send HTTP request to a webpage.</li>
+            <li>Parse HTML using each parser.</li>
+            <li>Extract desired data (e.g., all links).</li>
+        </ol>
+        <h3>Program</h3>
+        <pre><code># BeautifulSoup
+import requests
+from bs4 import BeautifulSoup
+url = 'http://example.com'
+r = requests.get(url)
+soup = BeautifulSoup(r.content, 'html.parser')
+print([a['href'] for a in soup.find_all('a', href=True)])
+
+# lxml
+from lxml import html
+r = requests.get(url)
+tree = html.fromstring(r.content)
+print(tree.xpath('//a/@href'))
+
+# Scrapy
+# Run in scrapy project shell
+# scrapy shell 'http://example.com'
+# response.css('a::attr(href)').getall()</code></pre>
+        <h3>Output</h3>
+        <p>List of extracted links from the target webpage.</p>
+    </section>
+
+    <section>
+        <h2>1c. Web Crawler - Scrapy</h2>
+        <h3>Aim</h3>
+        <p>Use Scrapy to crawl a website and extract structured data.</p>
+        <h3>Algorithm</h3>
+        <ol>
+            <li>Create a Scrapy spider.</li>
+            <li>Define start URLs.</li>
+            <li>Parse the response to extract data.</li>
+        </ol>
+        <h3>Program</h3>
+        <pre><code># scrapy_spider.py
+import scrapy
+
+class ExampleSpider(scrapy.Spider):
+    name = 'example'
+    start_urls = ['http://example.com']
+
+    def parse(self, response):
+        for link in response.css('a::attr(href)').getall():
+            yield {'link': link}</code></pre>
+        <h3>Output</h3>
+        <p>JSON or CSV of links extracted from the page.</p>
+    </section>
+
+    <section>
+        <h2>2b. Covid-19 Graph using NetworkX</h2>
+        <h3>Aim</h3>
+        <p>Create a graph-based representation of Covid-19 data using NetworkX.</p>
+        <h3>Algorithm</h3>
+        <ol>
+            <li>Create a graph.</li>
+            <li>Add nodes for regions.</li>
+            <li>Add edges with weights (e.g., travel or infection connections).</li>
+        </ol>
+        <h3>Program</h3>
+        <pre><code>import networkx as nx
+import matplotlib.pyplot as plt
+
+G = nx.Graph()
+G.add_edge('StateA', 'StateB', weight=100)
+G.add_edge('StateB', 'StateC', weight=150)
+nx.draw(G, with_labels=True)
+plt.show()</code></pre>
+        <h3>Output</h3>
+        <p>Graph visualization showing Covid-19 connections.</p>
+    </section>
+
+    <section>
+        <h2>3. Wine Quality Prediction</h2>
+        <h3>Aim</h3>
+        <p>Predict wine quality based on physicochemical properties using machine learning.</p>
+        <h3>Algorithm</h3>
+        <ol>
+            <li>Load dataset.</li>
+            <li>Split into training and test sets.</li>
+            <li>Train a model (e.g., RandomForest).</li>
+            <li>Evaluate model.</li>
+        </ol>
+        <h3>Program</h3>
+        <pre><code>from sklearn.datasets import load_wine
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
+
+X, y = load_wine(return_X_y=True)
+X_train, X_test, y_train, y_test = train_test_split(X, y)
+model = RandomForestClassifier()
+model.fit(X_train, y_train)
+print(accuracy_score(y_test, model.predict(X_test)))</code></pre>
+        <h3>Output</h3>
+        <p>Accuracy score of the wine quality prediction model.</p>
+    </section>
+
+    <section>
+        <h2>4. House Price Estimation</h2>
+        <h3>Aim</h3>
+        <p>Estimate house prices using regression on selected features.</p>
+        <h3>Algorithm</h3>
+        <ol>
+            <li>Load dataset.</li>
+            <li>Select relevant features.</li>
+            <li>Train LinearRegression model.</li>
+        </ol>
+        <h3>Program</h3>
+        <pre><code>from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+import pandas as pd
+
+# Example dummy data
+data = pd.DataFrame({
+    'LotArea': [8000, 9000],
+    'YearBuilt': [2000, 1990],
+    'Basement': [500, 600],
+    'LivingArea': [1500, 1600],
+    'Price': [200000, 210000]
+})
+
+X = data[['LotArea', 'YearBuilt', 'Basement', 'LivingArea']]
+y = data['Price']
+X_train, X_test, y_train, y_test = train_test_split(X, y)
+model = LinearRegression()
+model.fit(X_train, y_train)
+print(model.predict(X_test))</code></pre>
+        <h3>Output</h3>
+        <p>Predicted house prices.</p>
+    </section>
+
+    <section>
+        <h2>5. Movie Recommendation System</h2>
+        <h3>Aim</h3>
+        <p>Build a movie recommendation system using collaborative filtering.</p>
+        <h3>Algorithm</h3>
+        <ol>
+            <li>Create user-item rating matrix.</li>
+            <li>Use cosine similarity to find similar users.</li>
+            <li>Recommend movies based on similar users' preferences.</li>
+        </ol>
+        <h3>Program</h3>
+        <pre><code>import pandas as pd
+from sklearn.metrics.pairwise import cosine_similarity
+
+ratings = pd.DataFrame({
+    'User1': [5, 4, 0],
+    'User2': [3, 0, 4],
+    'User3': [4, 5, 3]
+}, index=['MovieA', 'MovieB', 'MovieC']).T
+
+similarity = cosine_similarity(ratings)
+sim_df = pd.DataFrame(similarity, index=ratings.index, columns=ratings.index)
+print(sim_df)</code></pre>
+        <h3>Output</h3>
+        <p>User similarity matrix used for recommendations.</p>
+    </section>
+
+</body>
+</html>
