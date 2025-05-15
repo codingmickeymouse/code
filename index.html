@@ -12,18 +12,40 @@
             img {
           width: 100px; 
           }
-        .emoji {
-          font-size: 80px;
-        }
-        .text {
-          font-size: 36px;
-          font-weight: bold;
-        }
+        .container {
+      display: flex;
+      align-items: center;
+      gap: 20px; 
+      flex-wrap: wrap;
+    }
+    .emoji {
+      font-size: 70px;
+    }
+    .text {
+      font-size: 32px;
+      font-weight: bold;
+    }
+    .pdf-link {
+      text-decoration: none;
+      color: white;
+      background: #3498db;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+    img {
+      height: 100px;
+      object-fit: contain;
+    }
     </style>
 </head>
 <body>
     <h1>AML</h1>
-    <p><a href="aml.pdf" target="_blank" style="text-decoration:none; color:white; background:#3498db; padding:10px 15px; border-radius:5px;">View AML PDF</a></p> <img src="img.png" alt="abi"> <div class="text">hiiiiii</div> <div class="emoji">😂</div>
+    <div class="container">
+    <a href="aml.pdf" target="_blank" class="pdf-link">View AML PDF</a>
+    <img src="img.png" alt="abi">
+    <div class="text">hiiiiii</div>
+    <div class="emoji">😂</div>
+  </div>
     <h2>alt - <a href="https://drive.google.com/file/d/1pXl4UaexV7yuEn5M53A2aSPaqAFsVnM4/view?usp=sharing" target="_blank">AML</a></h2>
     <h2>AML_Practicals - <a href="https://docs.google.com/document/d/126f6CAmwOU_xlaEpQA4YGY67LOH_rjBpD7RXxlz1EAs/edit?usp=drivesdk" target="_blank">Open Document</a></h2>
 
