@@ -15,7 +15,6 @@
       --btn-bg: #3498db;
       --btn-hover: #2980b9;
     }
-
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: var(--bg-light);
@@ -24,28 +23,23 @@
       padding: 20px;
       transition: background 0.3s, color 0.3s;
     }
-
     body.dark {
       background: var(--bg-dark);
       color: var(--text-dark);
     }
-
     h1 {
       text-align: center;
       color: inherit;
       margin-bottom: 20px;
     }
-
     .switch-container {
       display: flex;
       justify-content: center;
       margin-bottom: 20px;
     }
-
     .switch-container input {
       display: none;
     }
-
     .slider {
       position: relative;
       width: 60px;
@@ -54,7 +48,6 @@
       border-radius: 30px;
       cursor: pointer;
     }
-
     .slider::before {
       content: "";
       position: absolute;
@@ -66,15 +59,12 @@
       left: 3px;
       transition: 0.4s;
     }
-
     input:checked + .slider {
       background-color: var(--btn-bg);
     }
-
     input:checked + .slider::before {
       transform: translateX(30px);
     }
-
     details {
       background: var(--card-light);
       padding: 20px;
@@ -84,11 +74,9 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transition: background 0.3s;
     }
-
     body.dark details {
       background: var(--card-dark);
     }
-
     summary {
       font-size: 18px;
       font-weight: bold;
@@ -96,18 +84,15 @@
       color: #2980b9;
       outline: none;
     }
-
     h3 {
       color: inherit;
       margin-bottom: 5px;
     }
-
     p, ol {
       font-size: 15px;
       color: inherit;
       margin-top: 0;
     }
-
     pre {
       background: #f4f4f4;
       padding: 10px;
@@ -120,11 +105,9 @@
       white-space: pre-wrap;
       word-wrap: break-word;
     }
-
     body.dark pre {
       background: #1c1c1c;
     }
-
     .copy-btn {
       position: absolute;
       top: 8px;
@@ -138,11 +121,9 @@
       font-size: 12px;
       user-select: none;
     }
-
     .copy-btn:hover {
       background: var(--btn-hover);
     }
-
     .copy-msg {
       position: absolute;
       top: -25px;
@@ -163,174 +144,435 @@
     <input type="checkbox" id="theme-toggle" />
     <span class="slider"></span>
   </div>
-      <div class="container">
+
     <a href="wt.pdf" target="_blank" class="pdf-link">View WT PDF</a>
-  </div>
     <h2>alt - <a href="https://drive.google.com/file/d/1RwKC0EaCVpiusSaBYs1sCt6LAF4NrV3k/view?usp=sharing" target="_blank">WT</a></h2>
     <h2>practice - <a href="https://docs.google.com/document/d/1I_1PUP6t6-n50nk0kQnacsSl970_J1XD9x9Pxf62xpk/edit?usp=sharing" target="_blank">Open Link</a></h2>  
 
-  <!-- Program 1 a) -->
-  <details>
-    <summary>1 a) Create a portfolio website for a Profile</summary>
-    <h3>Aim</h3>
-    <p>To design and develop a personal portfolio website using HTML and CSS.</p>
-    <h3>Algorithm</h3>
-    <ol>
-      <li>Design a layout for the portfolio.</li>
-      <li>Create HTML structure for profile, projects, contact, etc.</li>
-      <li>Style with CSS including responsiveness.</li>
-      <li>Test in various browsers and devices.</li>
-    </ol>
-    <h3>Program</h3>
-    <pre>
-      <span class="copy-msg">Copied!</span>
-      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-      <code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
+<!-- Program 1 a) -->
+<details>
+  <summary>1 a) Create a portfolio website for a Profile</summary>
+  <h3>Aim</h3>
+  <p>To design and develop a responsive personal portfolio website showcasing skills, projects, and contact details.</p>
+  <h3>Algorithm</h3>
+  <ol>
+    <li>Set up HTML structure with sections: Header, About, Skills, Projects, and Contact.</li>
+    <li>Style the webpage using CSS for layout, typography, and responsiveness.</li>
+    <li>Add navigation links for smooth scrolling between sections.</li>
+    <li>Display key information like resume, skills, and major projects.</li>
+    <li>Provide contact details including email and LinkedIn.</li>
+    <li>Enhance user experience with clean design and interactive elements (e.g., buttons).</li>
+  </ol>
+  <h3>Program</h3>
+  <pre>
+    <span class="copy-msg">Copied!</span>
+    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+    <code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
 &lt;head&gt;
-  &lt;title&gt;My Portfolio&lt;/title&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Sreeshma G | Portfolio&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;header&gt;&lt;h1&gt;John Doe&lt;/h1&gt;&lt;/header&gt;
-  &lt;section&gt;
-    &lt;h2&gt;Projects&lt;/h2&gt;
-    &lt;p&gt;Project 1: Description...&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code>
-    </pre>
-    <h3>Output</h3>
-    <p>A functional and styled personal portfolio website.</p>
-  </details>
+  &lt;header&gt;
+    &lt;h1&gt;Sreeshma G&lt;/h1&gt;
+    &lt;p&gt;AI &amp; Full-Stack Developer&lt;/p&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#skills"&gt;Skills&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#projects"&gt;Projects&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
 
-  <!-- Program 1 b) -->
-  <details>
-    <summary>1 b) Create a login form using HTML and CSS</summary>
-    <h3>Aim</h3>
-    <p>To design a login form with validation using HTML and CSS.</p>
-    <h3>Algorithm</h3>
-    <ol>
-      <li>Create an HTML form with fields for username and password.</li>
-      <li>Add labels and placeholders for better usability.</li>
-      <li>Style the form using CSS to center it on the page and enhance appearance.</li>
-      <li>Ensure responsiveness and clarity in layout.</li>
-    </ol>
-    <h3>Program</h3>
-    <pre>
-      <span class="copy-msg">Copied!</span>
-      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-      <code>&lt;!DOCTYPE html&gt;
+  &lt;section id="about"&gt;
+    &lt;h2&gt;About Me&lt;/h2&gt;
+    &lt;p&gt;Final-year B.Tech (AIML) student passionate about AI and software development. Skilled in building scalable applications, AI-driven solutions, and full-stack development.&lt;/p&gt;
+    &lt;a href="resume.pdf" download class="btn"&gt;Download Resume&lt;/a&gt;
+  &lt;/section&gt;
+
+  &lt;section id="skills"&gt;
+    &lt;h2&gt;Skills&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Python, C++, Java&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/section&gt;
+
+  &lt;section id="projects"&gt;
+    &lt;h2&gt;Projects&lt;/h2&gt;
+    &lt;div class="project"&gt;
+      &lt;h3&gt;AI-Based Fitness Trainer&lt;/h3&gt;
+      &lt;p&gt;Developed an AI-powered fitness trainer using MediaPipe and OpenCV for real-time posture correction.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="project"&gt;
+      &lt;h3&gt;Diet Recommendation System&lt;/h3&gt;
+      &lt;p&gt;Designed a diet planner using K-Means clustering to generate personalized diet recommendations.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;section id="contact"&gt;
+    &lt;h2&gt;Contact&lt;/h2&gt;
+    &lt;p&gt;Email: sreeshma.g.aiml.2022@snsct.org&lt;/p&gt;
+    &lt;p&gt;LinkedIn: &lt;a href="https://www.linkedin.com/in/sreeshma-g" target="_blank"&gt;linkedin.com/in/sreeshma-g&lt;/a&gt;&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;© 2024 Sreeshma G | All Rights Reserved&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+  </pre>
+  <h3>Output</h3>
+  <p>A portfolio webpage with sections like About, Skills, Projects, and Contact. Responsive and styled layout.</p>
+</details>
+
+<!-- Program 1 b) -->
+<details>
+  <summary>1 b) Create a portfolio website for a Fictional Business</summary>
+  <h3>Aim</h3>
+  <p>To design and develop a responsive and visually appealing website for a fictional business using HTML and CSS.</p>
+  <h3>Algorithm</h3>
+  <ol>
+    <li>Set up the HTML structure with key sections: Header, Home, About Us, Services/Products, Testimonials (optional), and Contact.</li>
+    <li>Style the webpage using CSS for layout, color scheme, fonts, and responsiveness across devices.</li>
+    <li>Implement a navigation bar with links for smooth scrolling or switching between sections.</li>
+    <li>Highlight business details such as company description, services/products offered, and unique selling points.</li>
+    <li>Include contact information such as business email, phone number, location, and social media links.</li>
+    <li>Enhance user experience with a clean, professional design and interactive elements (e.g., hover effects, call-to-action buttons).</li>
+  </ol>
+  <h3>Program</h3>
+  <pre>
+    <span class="copy-msg">Copied!</span>
+    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+    <code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;FreshBite Café&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;nav class="navbar"&gt;
+      &lt;div class="logo"&gt;FreshBite Café&lt;/div&gt;
+      &lt;ul class="nav-links"&gt;
+        &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#menu"&gt;Menu&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  &lt;section id="home" class="hero"&gt;
+    &lt;h1&gt;Welcome to FreshBite Café&lt;/h1&gt;
+    &lt;p&gt;Delicious, Organic &amp; Fresh Food Made with Love&lt;/p&gt;
+  &lt;/section&gt;
+  &lt;section id="about" class="section"&gt;
+    &lt;h2&gt;About Us&lt;/h2&gt;
+    &lt;p&gt;At FreshBite Café, we serve homemade meals made with organic ingredients sourced from local farms. Whether you’re craving a fresh salad or a hearty sandwich, we've got you covered!&lt;/p&gt;
+  &lt;/section&gt;
+  &lt;section id="menu" class="section"&gt;
+    &lt;h2&gt;Our Menu&lt;/h2&gt;
+    &lt;ul class="menu-list"&gt;
+      &lt;li&gt;&lt;strong&gt;Avocado Toast&lt;/strong&gt; - ₹150&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Veggie Wrap&lt;/strong&gt; - ₹120&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Green Smoothie&lt;/strong&gt; - ₹100&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Cold Brew Coffee&lt;/strong&gt; - ₹90&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/section&gt;
+  &lt;section id="contact" class="section"&gt;
+    &lt;h2&gt;Contact Us&lt;/h2&gt;
+    &lt;p&gt;Email: hello@freshbitecafe.com&lt;/p&gt;
+    &lt;p&gt;Phone: +91 98765 43210&lt;/p&gt;
+    &lt;p&gt;Location: 123 Green Street, Bangalore, India&lt;/p&gt;
+  &lt;/section&gt;
+  &lt;footer&gt;
+    &lt;p&gt;&copy; 2025 FreshBite Café. All rights reserved.&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+  </pre>
+  <h3>Output</h3>
+  <p>A fictional business website with navigation and sections like Home, About, Menu, and Contact. Fully responsive.</p>
+</details>
+
+  <!-- Program 2 -->
+<details>
+  <summary>2) Create a Web Page and implement Java Script functions</summary>
+  <h3>Aim</h3>
+  <p>To create a web tool that processes input text by converting it to lowercase, removing punctuation, and tokenizing it into individual words.</p>
+  <h3>Algorithm</h3>
+  <ol>
+    <li>Initialize Interface: Design the user interface with input (textarea), trigger (button), and output sections.</li>
+    <li>Style Interface: Apply styles to improve layout, readability, and user experience.</li>
+    <li>Define Processing Logic: Create a function that triggers on button click to handle text processing.</li>
+    <li>Capture & Normalize Input: Retrieve user input and convert it to lowercase for uniformity.</li>
+    <li>Clean & Tokenize Text: Remove punctuation using regular expressions and split the cleaned text into individual words (tokens).</li>
+    <li>Output Results: Display the processed versions in their respective output sections.</li>
+  </ol>
+  <h3>Program</h3>
+  <pre>
+    <span class="copy-msg">Copied!</span>
+    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+    <code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;title&gt;Login Form&lt;/title&gt;
+  &lt;title&gt;Text Processor&lt;/title&gt;
   &lt;style&gt;
-    body {
-      font-family: Arial;
-      background: #f4f4f4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .login {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    input[type=&quot;text&quot;], input[type=&quot;password&quot;] {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-    }
-    input[type=&quot;submit&quot;] {
-      background: #3498db;
-      color: white;
-      border: none;
-      padding: 10px;
-      width: 100%;
-      cursor: pointer;
-    }
+    body { font-family: Arial, sans-serif; padding: 30px; max-width: 700px; margin: auto; }
+    textarea { width: 100%; height: 100px; font-size: 16px; }
+    button { margin-top: 10px; padding: 10px 20px; font-size: 16px; }
+    .output { margin-top: 20px; }
+    .output h3 { margin-bottom: 5px; }
+    .output pre { background: #f5f5f5; padding: 10px; border-radius: 5px; }
   &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;div class=&quot;login&quot;&gt;
-    &lt;form&gt;
-      &lt;h2&gt;Login&lt;/h2&gt;
-      &lt;input type=&quot;text&quot; placeholder=&quot;Username&quot; required&gt;
-      &lt;input type=&quot;password&quot; placeholder=&quot;Password&quot; required&gt;
-      &lt;input type=&quot;submit&quot; value=&quot;Login&quot;&gt;
-    &lt;/form&gt;
+  &lt;h1&gt;Text Processing Tool&lt;/h1&gt;
+  &lt;textarea id="inputText" placeholder="Enter your text here..."&gt;&lt;/textarea&gt;&lt;br&gt;
+  &lt;button onclick="processText()"&gt;Process&lt;/button&gt;
+  &lt;div class="output"&gt;
+    &lt;h3&gt;Lowercase Text:&lt;/h3&gt;
+    &lt;pre id="lowercaseText"&gt;&lt;/pre&gt;
+    &lt;h3&gt;Text Without Punctuation:&lt;/h3&gt;
+    &lt;pre id="noPunctuationText"&gt;&lt;/pre&gt;
+    &lt;h3&gt;Tokenized Words:&lt;/h3&gt;
+    &lt;pre id="tokenizedText"&gt;&lt;/pre&gt;
   &lt;/div&gt;
+  &lt;script&gt;
+    function processText() {
+      const text = document.getElementById("inputText").value;
+      const lower = text.toLowerCase();
+      document.getElementById("lowercaseText").textContent = lower;
+      const noPunctuation = lower.replace(/[.,\/#!$%\\^&\\*;:{}=\\-_`~()]/g, "");
+      document.getElementById("noPunctuationText").textContent = noPunctuation;
+      const tokens = noPunctuation.split(/\\s+/).filter(w => w.length > 0);
+      document.getElementById("tokenizedText").textContent = JSON.stringify(tokens, null, 2);
+    }
+  &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code>
-    </pre>
-    <h3>Output</h3>
-    <p>A responsive login form styled with CSS, ready for integration with backend logic.</p>
-  </details>
+  </pre>
+  <h3>Output</h3>
+  <p>Displays lowercase version, punctuation-free text, and tokenized words from input.</p>
+</details>
 
-  <!-- Program 1 c) -->
-  <details>
-    <summary>1 c) Create a responsive website using Bootstrap</summary>
-    <h3>Aim</h3>
-    <p>To create a responsive web layout using Bootstrap framework.</p>
-    <h3>Algorithm</h3>
-    <ol>
-      <li>Include Bootstrap CSS and JS via CDN in the HTML file.</li>
-      <li>Use Bootstrap grid system and responsive classes to organize layout.</li>
-      <li>Add components like Navbar, Cards, and Footer.</li>
-      <li>Test responsiveness across screen sizes.</li>
-    </ol>
-    <h3>Program</h3>
-    <pre>
-      <span class="copy-msg">Copied!</span>
-      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-      <code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;UTF-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-  &lt;title&gt;Bootstrap Website&lt;/title&gt;
-  &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;nav class=&quot;navbar navbar-expand-lg navbar-dark bg-dark&quot;&gt;
-    &lt;div class=&quot;container-fluid&quot;&gt;
-      &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;MySite&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/nav&gt;
+<!-- Program 3 -->
+<details>
+  <summary>3) Build a Web Application using Sentimental Analysis API</summary>
+  <h3>Aim</h3>
+  <p>To detect and display the sentiment (positive, negative, or neutral) of user-input text using a sentiment analysis API.</p>
+  <h3>Algorithm</h3>
+  <ol>
+    <li>Collect input from a text area.</li>
+    <li>Send it to a backend via POST request.</li>
+    <li>Use API to analyze sentiment.</li>
+    <li>Classify result based on score.</li>
+    <li>Send result back to frontend and display.</li>
+  </ol>
+  <h3>Program</h3>
+  <pre>
+    <span class="copy-msg">Copied!</span>
+    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+    <code>// Frontend (index.html)
+&lt;textarea id="userText"&gt;&lt;/textarea&gt;
+&lt;button onclick="analyzeSentiment()"&gt;Analyze&lt;/button&gt;
+&lt;div id="result"&gt;&lt;/div&gt;
 
-  &lt;div class=&quot;container mt-5&quot;&gt;
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;col-md-4&quot;&gt;
-        &lt;div class=&quot;card&quot;&gt;
-          &lt;div class=&quot;card-body&quot;&gt;
-            &lt;h5 class=&quot;card-title&quot;&gt;Card 1&lt;/h5&gt;
-            &lt;p class=&quot;card-text&quot;&gt;Some quick example text.&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;col-md-4&quot;&gt;
-        &lt;div class=&quot;card&quot;&gt;
-          &lt;div class=&quot;card-body&quot;&gt;
-            &lt;h5 class=&quot;card-title&quot;&gt;Card 2&lt;/h5&gt;
-            &lt;p class=&quot;card-text&quot;&gt;Another example text.&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+&lt;script&gt;
+async function analyzeSentiment() {
+  const text = document.getElementById("userText").value;
+  const resultDiv = document.getElementById("result");
+  if (!text) {
+    resultDiv.textContent = "Please enter some text.";
+    return;
+  }
+  resultDiv.textContent = "Analyzing...";
+  try {
+    const res = await fetch("http://localhost:3000/analyze", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text })
+    });
+    const data = await res.json();
+    resultDiv.innerHTML = `&lt;strong&gt;Sentiment:&lt;/strong&gt; ${data.sentiment}&lt;br&gt;&lt;strong&gt;Score:&lt;/strong&gt; ${data.score}`;
+  } catch (e) {
+    resultDiv.textContent = "Error analyzing sentiment.";
+  }
+}
+&lt;/script&gt;
 
-  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code>
-    </pre>
-    <h3>Output</h3>
-    <p>A responsive layout using Bootstrap components and grid system.</p>
-  </details>
+// Backend (server.js)
+const express = require('express');
+const bodyParser = require('body-parser');
+const Sentiment = require('sentiment');
+const app = express();
+const sentiment = new Sentiment();
+app.use(bodyParser.json());
+app.post('/analyze', (req, res) => {
+  const { text } = req.body;
+  const result = sentiment.analyze(text);
+  let label = 'neutral';
+  if (result.score > 1) label = 'positive';
+  else if (result.score < -1) label = 'negative';
+  res.json({ sentiment: label, score: result.score });
+});
+app.listen(3000, () => console.log('Running...'));
+</code>
+  </pre>
+  <h3>Output</h3>
+  <p>User enters text, clicks Analyze, and sees the sentiment and score returned by the API.</p>
+</details>
 
-  <!-- Additional programs to be added here -->
+<!-- Program 4 -->
+<details>
+  <summary>4) Build a Web Page that performs Linear Regression</summary>
+  <h3>Aim</h3>
+  <p>To implement a linear regression model using TensorFlow.js that predicts house prices based on size.</p>
+  <h3>Algorithm</h3>
+  <ol>
+    <li>Load TensorFlow.js and Chart.js libraries.</li>
+    <li>Define dataset and normalize it.</li>
+    <li>Build and train the model.</li>
+    <li>Make predictions.</li>
+    <li>Visualize results using Chart.js.</li>
+  </ol>
+  <h3>Program</h3>
+  <pre>
+    <span class="copy-msg">Copied!</span>
+    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+    <code>&lt;script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;canvas id="chart" width="800" height="400"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+const sizes = [500, 700, 800, 1000, 1200, 1500];
+const prices = [150, 200, 210, 250, 300, 330];
+const xs = tf.tensor1d(sizes);
+const ys = tf.tensor1d(prices);
+const model = tf.sequential();
+model.add(tf.layers.dense({ units: 1, inputShape: [1] }));
+model.compile({ optimizer: 'sgd', loss: 'meanSquaredError' });
+
+async function trainModel() {
+  await model.fit(xs, ys, {
+    epochs: 300,
+    callbacks: {
+      onEpochEnd: (epoch, logs) => {
+        if (epoch % 50 === 0) console.log(`Epoch ${epoch}: loss = ${logs.loss}`);
+      }
+    }
+  });
+  document.getElementById("status").textContent = "Training Complete";
+  plot();
+}
+
+async function plot() {
+  const chartData = {
+    datasets: [
+      { label: "Original", data: sizes.map((s, i) => ({ x: s, y: prices[i] })), backgroundColor: "blue" },
+      { label: "Regression Line", data: [], type: "line", borderColor: "red", fill: false }
+    ]
+  };
+  const lineX = [400, 1600];
+  const preds = model.predict(tf.tensor1d(lineX));
+  const predYs = await preds.array();
+  chartData.datasets[1].data = [{ x: lineX[0], y: predYs[0] }, { x: lineX[1], y: predYs[1] }];
+  new Chart(document.getElementById("chart"), { type: "scatter", data: chartData });
+}
+trainModel();
+&lt;/script&gt;
+</code>
+  </pre>
+  <h3>Output</h3>
+  <p>A chart displaying actual data points and a predicted regression line based on trained model.</p>
+</details>
+
+<!-- Program 5 -->
+<details>
+  <summary>5) Adobe Sensei Simulation (Content-Aware Fill)</summary>
+  <h3>Aim</h3>
+  <p>To simulate Adobe Photoshop’s Content-Aware Fill feature using JavaScript and canvas.</p>
+  <h3>Algorithm</h3>
+  <ol>
+    <li>Load image into canvas.</li>
+    <li>Select an area to be filled.</li>
+    <li>Sample the selection and fill with average color.</li>
+  </ol>
+  <h3>Program</h3>
+  <pre>
+    <span class="copy-msg">Copied!</span>
+    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+    <code>&lt;input type="file" id="upload" /&gt;
+&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+&lt;button id="fillButton"&gt;Fill Selected Area&lt;/button&gt;
+
+&lt;script&gt;
+const upload = document.getElementById('upload');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const fillButton = document.getElementById('fillButton');
+let img = new Image();
+let startX, startY, endX, endY, isDrawing = false;
+
+upload.onchange = e => {
+  const reader = new FileReader();
+  reader.onload = ev => {
+    img.onload = () => {
+      canvas.width = img.width;
+      canvas.height = img.height;
+      ctx.drawImage(img, 0, 0);
+    };
+    img.src = ev.target.result;
+  };
+  reader.readAsDataURL(e.target.files[0]);
+};
+
+canvas.onmousedown = e => {
+  const rect = canvas.getBoundingClientRect();
+  startX = e.clientX - rect.left;
+  startY = e.clientY - rect.top;
+  isDrawing = true;
+};
+
+canvas.onmouseup = e => {
+  if (!isDrawing) return;
+  const rect = canvas.getBoundingClientRect();
+  endX = e.clientX - rect.left;
+  endY = e.clientY - rect.top;
+  isDrawing = false;
+  ctx.strokeStyle = 'red';
+  ctx.lineWidth = 2;
+  ctx.strokeRect(startX, startY, endX - startX, endY - startY);
+};
+
+fillButton.onclick = () => {
+  if ([startX, startY, endX, endY].some(v => v === undefined)) return alert("Select an area first.");
+  const width = endX - startX;
+  const height = endY - startY;
+  const data = ctx.getImageData(startX, startY, width, height).data;
+  let r = 0, g = 0, b = 0;
+  for (let i = 0; i < data.length; i += 4) {
+    r += data[i]; g += data[i + 1]; b += data[i + 2];
+  }
+  const pixels = data.length / 4;
+  r = Math.floor(r / pixels); g = Math.floor(g / pixels); b = Math.floor(b / pixels);
+  ctx.fillStyle = `rgb(${r},${g},${b})`;
+  ctx.fillRect(startX, startY, width, height);
+};
+&lt;/script&gt;
+</code>
+  </pre>
+  <h3>Output</h3>
+  <p>User uploads an image, selects an area, and fills it with average sampled color.</p>
+</details>
+
 
   <script>
     function copyCode(btn) {
